@@ -10,10 +10,15 @@
     <title>Vue Email List</title>
 </head>
 <body>
-    <div id="app"></div>
-    <ul>
-        <li >{{mail}}</li>
-    </ul>
+    <div id="app">
+        <ul> 
+            <span v-for ="mail in arrayMail">
+                <li >{{mail}}</li>
+            </span>
+           
+        </ul>
+    </div>
+    
 
 
 

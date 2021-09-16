@@ -12,15 +12,9 @@ const app = new Vue(
         el: "#app",
         data: {
             arrayMail: [],
-            mail: 0,
+            mail: null,
         },
         methods: {
-            listMail() {
-               this.mail = result.data.response;
-               for (let i = 0; i < 10 ; i++) {
-                this.arrayMail.push(this.mail);
-               }
-            } 
         },
         mounted() {
             axios
@@ -29,6 +23,11 @@ const app = new Vue(
                     // console.log(result.data.response);
                     this.mail = result.data.response;
                     console.log(this.mail);
+                    this.arrayMail.push(this.mail);
+
+                    // for (let i = 0; i < 1 ; i++) {
+                        
+                    //    }
                 })
         }
 
